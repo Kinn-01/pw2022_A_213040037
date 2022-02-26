@@ -70,6 +70,8 @@
     // <, >, <=, >=, ==, !=
     echo 1 < 5;
     echo "<br>";
+    var_dump(1 > 5);
+    echo "<br>";
     echo 10 == "10";
     echo "<hr>";
 
@@ -85,8 +87,67 @@
     $x ++;
     echo $x;
 
+    // Standar output
+    // echo, print
+    // print_r
+    // var_dump
+
+    echo "Gilman Arief";
+    echo "<br>";
+
+    print "Gilman Arief";
+    echo "<br>";
+
+    print_r("GIlman Arief");
+    echo "<br>";
+
+    var_dump("Gilman Arief");
+    echo "<br>";
+
+    echo "<hr>";
+
+    // Penulisan sintaks PHP
+    // 1. PHP di dalam html
+    // 2. HTML di dalam PHP
+
+    // Assignment
+    // =, +=, -=, *=, /=, %=, .=
+
+    $x = 1;
+    $x +=5;
+    echo $x;
+    echo "<br>";
+    $nama = "Gilman";
+    $nama .= " ";
+    $nama .= "Arief";
+    echo $nama;
 
 
+    echo "<hr>";
 
+    // Logika
+    // &&(Dua dua nya harus true), ||(salah satu harus true), !
+    $x = 10;
+    var_dump($x < 20 && $x % 2 == 0);
+
+
+    echo "<hr>";
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar PHP</title>
+    </head>
+    <body>
+        <h1>
+            Halo, Selamat Datang <?php echo "Gilman Arief"; ?>
+        </h1>
+        <hr>
+        <?php 
+            echo "<h1>Halo, Selamat Datang Gilman Arief</h1>"
+        ?>
+    </body>
+</html>
+
