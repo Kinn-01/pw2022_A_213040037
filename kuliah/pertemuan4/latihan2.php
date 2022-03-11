@@ -25,8 +25,9 @@ function totalLuasDuaKubus($a,$b) {
     // return "Total luas dari kubus A dengan sisi $a and kubus B dengan sisi $b adalah " . pow($a, 3) + pow($b, 3);
 }
 // print dan memanggil fungsi
-echo totalLuasDuaKubus(9,4);
+echo totalLuasDuaKubus(9,4)/*argument*/;
 echo "<br>";
 echo totalLuasDuaKubus(10,15);
-
+echo "<br>";
+echo totalLuasDuaKubus(100, 200);
 ?>
