@@ -13,23 +13,65 @@ $mahasiswa = [
         "npm" => "213040008", 
         "email" => "alvarez@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "image" => "image/2.jpg"
+        "image" => "image/1.png"
     ],
     [
         "nama" => "Luthfi", 
         "npm" => "213040014", 
         "email" => "Luthfi@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "image" => "image/3.jpg"
+        "image" => "image/1.png"
     ],
     [
         "nama" => "Malwi", 
         "npm" => "213040007", 
         "email" => "Malwi@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "image" => "image/4.jpg"
+        "image" => "image/1.png"
+    ],
+    [
+      "nama" => "Marc Marquez",
+      "npm" => "213040099",
+      "email" => "marcquez@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
+    ],
+    [
+      "nama" => "Valentina rosi",
+      "npm" => "213040046",
+      "email" => "valentino23@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
+    ],
+    [
+      "nama" => "John Cena",
+      "npm" => "213040027",
+      "email" => "JohnC3@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
+    ],
+    [
+      "nama" => "C Ronaldo",
+      "npm" => "213040007",
+      "email" => "CR7@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
+    ],
+    [
+      "nama" => "Lionel Messi",
+      "npm" => "213040010",
+      "email" => "Messi10@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
+    ],[
+      "nama" => "Beckham",
+      "npm" => "2130400019",
+      "email" => "DavidBeckham23@gmail.com",
+      "jurusan" => "Teknik Informatika",
+      "image" => "image/1.png"
     ],
 
+    // Tambahkan jadi 10 data
 ];
 
 ?>
