@@ -60,6 +60,10 @@ if(tambah($_POST) > 0) {
                     <input type="text" class="form-control" id="tshirt" name="tshirt" required>
                 </div>
                 <div class="mb-3">
+                    <label for="tahun" class="form-label">Tahun</label>
+                    <input type="text" class="form-control" id="tahun" name="tahun" required>
+                </div>
+                <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
                     <input type="text" class="form-control" id="stok" name="stok">
                 </div>

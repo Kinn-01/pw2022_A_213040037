@@ -73,6 +73,11 @@ if(ubah($_POST) > 0) {
                     value="<?= $jrs["tshirt"];?> " >
                 </div>
                 <div class="mb-3">
+                    <label for="tahun" class="form-label">Tahun</label>
+                    <input type="text" class="form-control" id="tahun" name="tahun" required 
+                    value="<?= $jrs["tahun"];?> " >
+                </div>
+                <div class="mb-3">
                     <label for="stok" class="form-label">Stok</label>
                     <input type="text" class="form-control" id="stok" name="stok" 
                     value="<?= $jrs["stok"];?> " >

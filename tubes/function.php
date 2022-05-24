@@ -9,7 +9,7 @@ function koneksi() {
 
 function query($query) {
 $conn = koneksi();
-$result = mysqli_query($conn, "SELECT * FROM jerseay") or die(mysqli_error($conn));
+$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 $rows = [];
 while ($row = mysqli_fetch_assoc($result)) {
   $rows[] = $row;
@@ -25,13 +25,14 @@ function tambah($data) {
     $size = htmlspecialchars($data["size"]);
     $price = htmlspecialchars($data["price"]);
     $tshirt = htmlspecialchars($data["tshirt"]);
+    $tahun = htmlspecialchars($data["tahun"]);
     $stok = htmlspecialchars($data["stok"]);
     $gambar = htmlspecialchars($data["gambar"]);
 
     $query = "INSERT INTO 
                 jerseay 
               VALUES 
-                 (null, '$size','$price', '$tshirt', 
+                 (null, '$size','$price', '$tshirt', '$tahun', 
                  '$stok', '$gambar')";
 
     mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -54,6 +55,7 @@ function ubah($data) {
   $size = htmlspecialchars($data["size"]);
   $price = htmlspecialchars($data["price"]);
   $tshirt = htmlspecialchars($data["tshirt"]);
+  $tahun = htmlspecialchars($data["tahun"]);
   $stok = htmlspecialchars($data["stok"]);
   $gambar = htmlspecialchars($data["gambar"]);
 
@@ -61,6 +63,7 @@ function ubah($data) {
                 size = '$size',
                 price = '$price',
                 tshirt = '$tshirt',
+                tahun = '$tahun',
                 stok = '$stok',
                 gambar = '$gambar'
                 WHERE id = $id
@@ -69,4 +72,17 @@ function ubah($data) {
   mysqli_query($conn, $query) or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
+}
+
+function search($keyword) {
+  $query = "SELECT * FROM jerseay 
+              WHERE
+              tshirt LIKE '%$keyword%' OR
+              size LIKE '%$keyword%' OR
+              stok LIKE '%$keyword%' OR
+              price LIKE '%$keyword%' OR
+              tahun LIKE '%$keyword%'
+              ";
+
+    return query($query);
 }

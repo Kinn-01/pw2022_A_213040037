@@ -3,6 +3,12 @@
 require 'function.php';
 $jerseay = query("SELECT * FROM jerseay");
 
+//tombol cari ditekan
+if (isset($_POST["search"]) ) {
+  $jerseay = search($_POST["keyword"]);
+}
+
+
 ?>
 
 
@@ -17,7 +23,7 @@ $jerseay = query("SELECT * FROM jerseay");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="icon" href="img/2.jpg">
-    <title>Daftar Baju</title>
+    <title>Halaman Admin</title>
 
   </head>
   <body>
@@ -37,9 +43,13 @@ $jerseay = query("SELECT * FROM jerseay");
           <a class="nav-link active" aria-current="page" href="#"></a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <!-- <form action="" method="POST">
+        <input type="text" name="keyword" autofocus placeholder="Masukan Kata Kunci" autocomplete="off">
+        <button type="submit" name="search">Search!</button>
+      </form> -->
+      <form action="" method="POST" class="d-flex">
+        <input class="form-control me-2" type="text" name="keyword" placeholder="Masukan Kata Kunci" aria-label="Search" autofocus autocomplete="off" >
+        <button class="btn btn-outline-info" type="submit" name="search">Search</button>
       </form>
     </div>
   </div>
@@ -53,6 +63,7 @@ $jerseay = query("SELECT * FROM jerseay");
       <th scope="col">Gambar</th>
       <th scope="col">Price</th>
       <th scope="col">Tshirt</th>
+      <th scope="col">Tahun</th>
       <th scope="col">Size</th>
       <th scope="col">Stok</th>
     </tr>
@@ -67,6 +78,7 @@ $jerseay = query("SELECT * FROM jerseay");
       </td>
       <td><?php echo $jrs["price"]; ?></td>
       <td><?php echo $jrs["tshirt"]; ?></td>
+      <td><?php echo $jrs["tahun"]; ?></td>
       <td><?php echo $jrs["size"]; ?></td>
       <td><?php echo $jrs["stok"]; ?></td>
 
