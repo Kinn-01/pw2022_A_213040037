@@ -46,7 +46,7 @@ if(tambah($_POST) > 0) {
       <div class="row mt-3">
           <div class="col-8">
 
-            <form action="" method="POST" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="mb-3">
                     <label for="size" class="form-label">Size</label>
                     <input type="text" class="form-control" id="size" name="size" required style="width: 150px;" required>
@@ -69,7 +69,7 @@ if(tambah($_POST) > 0) {
                 </div>
                 <div class="mb-3">
                     <label for="gambar" class="form-label">Gambar</label>
-                    <input type="text" class="form-control" id="gambar" name="gambar" required>
+                    <input type="file" class="form-control" id="gambar" name="gambar" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary" name ="tambah">Tambah Data Barang</button>

@@ -28,9 +28,12 @@ if (isset($_POST["search"]) ) {
   </head>
   <body>
     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Daftar Baju</a>
+    <a class="nav-link active" aria-current="page" href="registrasi.php">Registrasi</a>
+    <a class="nav-link active" aria-current="page" href="login.php">Login</a>
+    <a class="nav-link active" aria-current="page" href="login.php">Log Out</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,7 +58,7 @@ if (isset($_POST["search"]) ) {
   </div>
 </nav>
 <!-- Akhir navbar -->
-  <div class="container">
+  <div class="container" style="padding-top: 4rem;">
       <table class="table">
   <thead>
     <tr>

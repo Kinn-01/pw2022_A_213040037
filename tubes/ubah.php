@@ -55,8 +55,9 @@ if(ubah($_POST) > 0) {
       <div class="row mt-3">
           <div class="col-8">
 
-            <form action="" method="POST" autocomplete="off">
+            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <input type="hidden" name="id" value="<?= $jrs["id"]; ?>">
+                <input type="hidden" name="gambarLama" value="<?= $jrs["gambar"]; ?>">
                 <div class="mb-3">
                     <label for="size" class="form-label">Size</label>
                     <input type="text" class="form-control" id="size" name="size" required style="width: 150px;" required
@@ -84,8 +85,7 @@ if(ubah($_POST) > 0) {
                 </div>
                 <div class="mb-3">
                     <label for="gambar" class="form-label">Gambar</label>
-                    <input type="text" class="form-control" id="gambar" name="gambar" required 
-                    value="<?= $jrs["gambar"];?> " >
+                    <input type="file" class="form-control" id="gambar" name="gambar" required  >
                 </div>
 
                 <button type="submit" class="btn btn-primary" name ="tambah">Ubah Data Barang</button>
