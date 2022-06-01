@@ -60,6 +60,7 @@ if( isset($_POST["login"])) {
     $error = true;
 }
 
+
 ?>
 
 
@@ -81,6 +82,7 @@ if( isset($_POST["login"])) {
     <title>Halaman Login</title>
 </head>
 <body>
+
     <!-- Navbar -->
 
 <form action="" method="POST">
@@ -99,8 +101,15 @@ if( isset($_POST["login"])) {
     <input type="checkbox" name="remember" id="remember">
     <label for="remember">Remember Me</label>
 
+    <br>
+
+    <a href="registrasi.php"><i class="fas fa-user" style="color:white ;"> Registrasi</i></a>
+
+
 
   <button type="submit" name="login" class="btn" value="Sign in">Login</button>
+  
+  
 </div>
 <?php if( isset($error)) : ?>
     <p style="color: red; font-style:italic;">Username / Password Salah</p>

@@ -49,58 +49,52 @@ if(ubah($_POST) > 0) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- css -->
+    <link rel="stylesheet" href="style3.css" />
+
     <title>Ubah Data Baju</title>
   </head>
   <body>
     
-  <div class="container">
-      <h1>Form Ubah Data Barang</h1>
+  <div class="wrapper">
+      <h2>Tambah Data Barang</h2>
+      <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
+      <input type="hidden" name="id" value="<?= $jrs["id"]; ?>">
+        <input type="hidden" name="gambarLama" value="<?= $jrs["gambar"]; ?>">
 
-      <a href="../index.php">Kembali ke daftar</a>
+        <div class="input-box">
+        <input type="text" class="form-control" id="size" name="size" required  required
+        value="<?= $jrs["size"];?> " >
+        </div>
+        <div class="input-box">
+        <input type="text" class="form-control" id="price" name="price" required 
+         value="<?= $jrs["price"];?> " >
+        </div>
+        <div class="input-box">
+        <input type="text" class="form-control" id="tshirt" name="tshirt" required 
+         value="<?= $jrs["tshirt"];?> " >
+        </div>
+        <div class="input-box">
+        <input type="text" class="form-control" id="tahun" name="tahun" required 
+        value="<?= $jrs["tahun"];?> " >
+        </div>
+        <div class="input-box">
+        <input type="text" class="form-control" id="stok" name="stok" 
+        value="<?= $jrs["stok"];?> " >
+        </div>
+        <div class="input-box">
+        <input type="file" class="form-control" id="gambar" name="gambar" required  >
+        </div>
 
-      <div class="row mt-3">
-          <div class="col-8">
+        <div class="input-box button">
+        <button type="submit" class="btn btn-primary" name ="tambah">Ubah Data Barang</button>
+        </div>
+      </form>
+    </div>
 
-            <form action="" method="POST" enctype="multipart/form-data" autocomplete="off">
-                <input type="hidden" name="id" value="<?= $jrs["id"]; ?>">
-                <input type="hidden" name="gambarLama" value="<?= $jrs["gambar"]; ?>">
-                <div class="mb-3">
-                    <label for="size" class="form-label">Size</label>
-                    <input type="text" class="form-control" id="size" name="size" required style="width: 150px;" required
-                    value="<?= $jrs["size"];?> " >
-                </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="text" class="form-control" id="price" name="price" required 
-                    value="<?= $jrs["price"];?> " >
-                </div>
-                <div class="mb-3">
-                    <label for="tshirt" class="form-label">Tshirt</label>
-                    <input type="text" class="form-control" id="tshirt" name="tshirt" required 
-                    value="<?= $jrs["tshirt"];?> " >
-                </div>
-                <div class="mb-3">
-                    <label for="tahun" class="form-label">Tahun</label>
-                    <input type="text" class="form-control" id="tahun" name="tahun" required 
-                    value="<?= $jrs["tahun"];?> " >
-                </div>
-                <div class="mb-3">
-                    <label for="stok" class="form-label">Stok</label>
-                    <input type="text" class="form-control" id="stok" name="stok" 
-                    value="<?= $jrs["stok"];?> " >
-                </div>
-                <div class="mb-3">
-                    <label for="gambar" class="form-label">Gambar</label>
-                    <input type="file" class="form-control" id="gambar" name="gambar" required  >
-                </div>
+      
 
-                <button type="submit" class="btn btn-primary" name ="tambah">Ubah Data Barang</button>
-            </form>
 
-          </div>
-      </div>
-
-  </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

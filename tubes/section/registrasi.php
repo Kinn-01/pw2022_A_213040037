@@ -1,6 +1,7 @@
 <?php 
 require 'function.php';
 
+$conn = koneksi();
 if (isset($_POST["register"])) {
 
     if ( registrasi($_POST) > 0) {
@@ -31,7 +32,7 @@ if (isset($_POST["register"])) {
     <!-- mhy css -->
     <link rel="stylesheet" href="style2.css" />
 
-    <link rel="icon" href="img/2.jpg">
+    <link rel="icon" href="../img/2.jpg">
 
     <title>Halaman Registrasi</title>
 </head>

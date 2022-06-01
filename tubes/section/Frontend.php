@@ -19,12 +19,12 @@ $jerseay = query("SELECT * FROM jerseay");
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- My css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!-- Bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
-    <link rel="icon" href="img/kits/2.jpg">
+    <link rel="icon" href="../img/kits/2.jpg">
 
     <title>Chelsea Store</title>
   </head>
@@ -34,7 +34,7 @@ $jerseay = query("SELECT * FROM jerseay");
 <nav class="navbar bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="img/2.jpg" alt="" width="50" height="44" class="rounded-circle" class="d-inline-block align-text-top">
+      <img src="../img/2.jpg" alt="" width="50" height="44" class="rounded-circle" class="d-inline-block align-text-top">
       <span>Chelsea District</span>
     </a>
     <ul class="nav justify-content-end">
@@ -68,19 +68,19 @@ $jerseay = query("SELECT * FROM jerseay");
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/bg/j.jpg" class="d-block w-100" alt="...">
+      <img src="../img/bg/j.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Shop Now  <a href="#"><i class="bi bi-shop text-danger"></i></a></h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/bg/p-1.jpg" class="d-block w-100" alt="...">
+      <img src="../img/bg/p-1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       <h5>Shop Now  <a href="#"><i class="bi bi-shop text-danger"></i></a></h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/bg/w-2.jpg" class="d-block w-100" alt="...">
+      <img src="../img/bg/w-2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       <h5>Shop Now  <a href="#"><i class="bi bi-shop text-danger"></i></a></h5>
       </div>
@@ -104,103 +104,131 @@ $jerseay = query("SELECT * FROM jerseay");
 <!-- Section Merchandise -->
 <section id="merchandise">
   <div class="container">
+  <?php foreach ($jerseay as $jrs) {?>
     <div class="row">
+
       <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
       
       <div class="card">
-  <img src="img/Kits-1.png" class="card-img-top" alt="...">
+  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"></h5>
+    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
     <p class="card-text"></p>
     <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Detail</a>
   </div>
 </div>
 
+      
+
       </div>
+
       <div class="col-md-4 mb-3" data-aos="fade-down" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/Kits-2.jfif" class="card-img-top" alt="...">
+  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Price : £102,99 </h5>
-    <p class="card-text">Chelsea Home Shirt 2021-2022</p>
-    <p class="card-text">S/M/L/XL/XXL</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
+    <p class="card-text"></p>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary">Detail</a>
   </div>
 </div>
       </div>
+
       <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/Kits-3.jpg" class="card-img-top" alt="...">
+  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Price : £96,99 </h5>
-    <p class="card-text">Chelsea Away Shirt 2020-2021</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
+    <p class="card-text"></p>
+    <a href="#" class="btn btn-primary">Detail</a>
   </div>
 </div>
+
       </div> 
-      <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
+
+      <!-- <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/Kits-7.jfif" class="card-img-top" alt="...">
+  <img src="../img/kits/Kits-7.jfif" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £86,99 </h5>
     <p class="card-text">Chelsea Women Home Shirt 2021-2022</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
       </div>
+
       <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/Kits-6.png" class="card-img-top" alt="...">
+  <img src="../img/kits/Kits-6.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £76,99 </h5>
     <p class="card-text">Chelsea Women Away Shirt 2020-2021</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
       </div>
+
       <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/Kits-9.webp" class="card-img-top" alt="...">
+  <img src="../img/kits/Kits-9.webp" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £106,99 </h5>
     <p class="card-text">Chelsea Women Away Shirt 2021-2022</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
       </div>
+
       <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/T-kits-1.jpg" class="card-img-top" alt="...">
+  <img src="../img/kits/T-kits-1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £69,99 </h5>
     <p class="card-text">Chelsea Training Shirt 2021-2022</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
       </div> 
+
       <div class="col-md-4 mb-3"data-aos="fade-up" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/T-kits-2.jpg" class="card-img-top" alt="...">
+  <img src="../img/kits/T-kits-2.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £72,87 </h5>
     <p class="card-text">Chelsea Training Shirt 2021-2022</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
       </div>
+
       <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
+
       <div class="card">
-  <img src="img/kits/T-kits-3.png" class="card-img-top" alt="...">
+  <img src="../img/kits/T-kits-3.png" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Price : £56,99 </h5>
     <p class="card-text">Chelsea Training Shirt 2021-2022</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-      </div>
+
+      </div> -->
 
     </div>
+    <?php } ?>
   </div>
 
 </section>
@@ -220,7 +248,7 @@ $jerseay = query("SELECT * FROM jerseay");
       <div class="col">
     <div class="card">
       <hr>
-  <img src="img/ft/sponsor.png" class="card-img-top" alt="...">
+  <img src="../img/ft/sponsor.png" class="card-img-top" alt="...">
 </div>
     </div>
     </div>
