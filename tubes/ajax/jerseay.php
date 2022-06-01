@@ -23,13 +23,14 @@ $jerseay = query($query)
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">No</th>
       <th scope="col">Gambar</th>
       <th scope="col">Price</th>
       <th scope="col">Tshirt</th>
       <th scope="col">Tahun</th>
       <th scope="col">Size</th>
       <th scope="col">Stok</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>

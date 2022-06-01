@@ -104,131 +104,27 @@ $jerseay = query("SELECT * FROM jerseay");
 <!-- Section Merchandise -->
 <section id="merchandise">
   <div class="container">
-  <?php foreach ($jerseay as $jrs) {?>
+  
+  <!-- <div data-aos="flip-left"></div> -->
     <div class="row">
-
-      <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
-      
-      <div class="card">
-  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
-    <p class="card-text"></p>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Detail</a>
-  </div>
-</div>
-
-      
-
+     <?php foreach ($jerseay as $jrs) : ?>
+      <div class="col-sm-4">
+      <div data-aos="flip-up" data-aos-duration="2000">
+        <div class="card">
+          <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
+            <p class="card-text"><?php echo $jrs["tshirt"]; ?></p>
+            <p class="card-text"><?php echo $jrs["stok"]; ?></p>
+            <a href="#" class="btn btn-primary">Detail</a>
+          </div>
+        </div>
+      </div>
       </div>
 
-      <div class="col-md-4 mb-3" data-aos="fade-down" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
-    <p class="card-text"></p>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Detail</a>
-  </div>
-</div>
-      </div>
-
-      <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary">Detail</a>
-  </div>
-</div>
-
-      </div> 
-
-      <!-- <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/Kits-7.jfif" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £86,99 </h5>
-    <p class="card-text">Chelsea Women Home Shirt 2021-2022</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div>
-
-      <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/Kits-6.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £76,99 </h5>
-    <p class="card-text">Chelsea Women Away Shirt 2020-2021</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div>
-
-      <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/Kits-9.webp" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £106,99 </h5>
-    <p class="card-text">Chelsea Women Away Shirt 2021-2022</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div>
-
-      <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/T-kits-1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £69,99 </h5>
-    <p class="card-text">Chelsea Training Shirt 2021-2022</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div> 
-
-      <div class="col-md-4 mb-3"data-aos="fade-up" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/T-kits-2.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £72,87 </h5>
-    <p class="card-text">Chelsea Training Shirt 2021-2022</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div>
-
-      <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-duration="2000">
-
-      <div class="card">
-  <img src="../img/kits/T-kits-3.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Price : £56,99 </h5>
-    <p class="card-text">Chelsea Training Shirt 2021-2022</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-      </div> -->
-
+      <?php endforeach; ?>
     </div>
-    <?php } ?>
+
   </div>
 
 </section>

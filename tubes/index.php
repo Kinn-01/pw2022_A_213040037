@@ -112,7 +112,7 @@ if (isset($_POST["search"]) ) {
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Login Screens:</h6>
-                    <a class="collapse-item" href="section/login.php">Login</a>
+                    <!-- <a class="collapse-item" href="section/login.php">Login</a> -->
                     <a class="collapse-item" href="section/registrasi.php">Register</a>
                 </div>
             </div>
@@ -225,6 +225,7 @@ if (isset($_POST["search"]) ) {
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Barang</h1>
                     </div>
+
             <div id="container">
       <table class="table">
   <thead>

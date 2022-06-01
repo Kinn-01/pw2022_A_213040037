@@ -8,7 +8,7 @@ if (isset($_POST["register"])) {
         echo "<script>
                 alert('user baru berhasil ditambahkan!');
                 document.location.href =
-        '../index.php';
+        'login.php';
             </script>";
     } else {
         echo mysqli_error($conn);
