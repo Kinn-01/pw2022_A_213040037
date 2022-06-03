@@ -103,11 +103,16 @@ if( isset($_POST["login"])) {
 
     <br>
 
-    <a href="registrasi.php"><i class="fas fa-user" style="color:white ;"> Registrasi</i></a>
+    <!-- <a href="registrasi.php"><i class="fas fa-user" style="color:white ;"> Registrasi</i></a> -->
 
 
 
   <button type="submit" name="login" class="btn" value="Sign in">Login</button>
+  <div class="card-footer bg-transparent border-transparent" style="height: 4rem;">
+        <div class="row">
+          <a href="registrasi.php" class="text-center col text-info btn badge bg-transparent"><span style="color: white; font-size:15px;">Silahkan Registrasi</span></a>
+        </div>
+      </div>
   
   
 </div>

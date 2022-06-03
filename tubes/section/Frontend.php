@@ -115,7 +115,7 @@ $jerseay = query("SELECT * FROM jerseay");
           <div class="card-body">
             <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
             <p class="card-text"><?php echo $jrs["tshirt"]; ?></p>
-            <p class="card-text"><?php echo $jrs["stok"]; ?></p>
+            <p class="card-text">Stok : <?php echo $jrs["stok"]; ?></p>
             <a href="#" class="btn btn-primary">Detail</a>
           </div>
         </div>

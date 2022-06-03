@@ -95,11 +95,15 @@ function upload() {
 }
 
 
+
+
 function hapus($id) {
-  global $conn;
-  mysqli_query($conn, "DELETE FROM jerseay WHERE id = $id");
+  $conn = koneksi();
+
+  mysqli_query($conn, "DELETE FROM jerseay WHERE id = '$id'");
   return mysqli_affected_rows($conn);
 }
+
 
 function ubah($data) {
   $conn = koneksi();
@@ -175,4 +179,30 @@ function registrasi($data) {
   mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$password')");
 
   return mysqli_affected_rows($conn);
+}
+
+// menambah barang masuk
+if(isset($_POST['barangmasuk'])) {
+  $conn = koneksi();
+
+  $baju = $_POST['baju'];
+  $pengirim = $_POST['pengirim'];
+  $qty = $_POST['qty'];
+
+  $cekstocksekarang = mysqli_query($conn, "SELECT * FROM jerseay WHERE id='$baju'");
+  $ambildata = mysqli_fetch_array($cekstocksekarang);
+
+  $stocksekarang = $ambildata['stok'];
+  $tambahstocksekarang = $stocksekarang + $qty;
+
+
+  $addtomasuk = mysqli_query($conn, "INSERT into masuk (id, keterangan ,qty) 
+                          value('$baju', '$pengirim', '$qty')");
+  $updatestockmasuk = mysqli_query($conn, "UPDATE jerseay SET stok='$tambahstocksekarang' WHERE id = '$baju'");
+       if($addtomasuk && $updatestockmasuk) {
+          header('location:masuk.php');
+      }else {
+          echo "gagal";
+          header('location:masuk.php');
+      }
 }
