@@ -31,6 +31,7 @@ $jerseay = query("SELECT * FROM jerseay");
   <body>
     
 <!-- Navbar -->
+<div id="home">
 <nav class="navbar bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -39,33 +40,32 @@ $jerseay = query("SELECT * FROM jerseay");
     </a>
     <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#merchandise">Men</a>
+    <a class="nav-link active" aria-current="page" href="#home">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#merchandise">Women</a>
+    <a class="nav-link" href="#merchandise">Kits</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#merchandise">Training Kits</a>
+    <a class="nav-link" href="login.php">Admin</a>
   </li>
 </ul>
-<!-- <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-info" type="submit">Search</button>
-</form> -->
   </div>
 </nav>
+</div>
 <!-- Akhir Navbar -->
 
 <!-- Carousel -->
-<section class="jumbotron">
+<section class="jumbotron-fluid">
 <div class="top-wrapper">
     <div class="container-fluid">
     <div id="carouselExampleCaptions" class="carousel slide col-lg-12" data-bs-ride="carousel">
+
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="../img/bg/j.jpg" class="d-block w-100" alt="...">
@@ -86,6 +86,7 @@ $jerseay = query("SELECT * FROM jerseay");
       </div>
     </div>
   </div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -94,7 +95,11 @@ $jerseay = query("SELECT * FROM jerseay");
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+    </div>
+    </div>
+
 </div>
+</section>
 <!-- Akhir Carousel -->
 
 <!-- <?php foreach ($jerseay as $jrs) { ?>
@@ -102,24 +107,25 @@ $jerseay = query("SELECT * FROM jerseay");
   <!-- <?php echo $jrs["price"]; ?> -->
 
 <!-- Section Merchandise -->
-<section id="merchandise">
+<section id="merchandise" style="padding-top: 8rem;">
+<h1 style="text-align: center;">Kits</h1>
   <div class="container">
-  
   <!-- <div data-aos="flip-left"></div> -->
     <div class="row">
      <?php foreach ($jerseay as $jrs) : ?>
       <div class="col-sm-4">
-      <div data-aos="flip-up" data-aos-duration="2000">
+      
         <div class="card">
           <img src="../img/<?php echo $jrs["gambar"]; ?>" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title"><?php echo $jrs["price"]; ?></h5>
             <p class="card-text"><?php echo $jrs["tshirt"]; ?></p>
+            <p class="card-text"><?php echo $jrs["size"]; ?></p>
             <p class="card-text">Stok : <?php echo $jrs["stok"]; ?></p>
-            <a href="#" class="btn btn-primary">Detail</a>
+            <!-- <a href="detail.php" class="btn btn-primary">Detail</a> -->
           </div>
         </div>
-      </div>
+      
       </div>
 
       <?php endforeach; ?>
@@ -132,30 +138,62 @@ $jerseay = query("SELECT * FROM jerseay");
 <!-- Akhir section -->
 
  <hr>
+ 
 <!-- Sponsor -->
-<section id="sponsor">
-  <div class="container">
-  <div class="row text-center">
-      <div class="col">
-        <h5></h5>
-       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col">
-    <div class="card">
-      <hr>
-  <img src="../img/ft/sponsor.png" class="card-img-top" alt="...">
-</div>
-    </div>
-    </div>
-   
-  </div>
-</section>
+
 <!-- Akhir Sponsor -->
 
+<!-- footer -->
+
+<footer class="bt-footer bg-dark position-relative text-white p-4 p-lg-5 "  >
+      <div class="row">
+        <div class="col">
+          <img src="../img/2.jpg" class="img-fluid mb-4 rounded-circle" width="100">
+          
+          
+          <p class="text-white">
+          Copyright © Chelsea Official Store 2022
+          </p>
+          <div class="d-inline-block mx-3">
+            <a href="https://www.instagram.com/chelseafc/?hl=id">
+              <div class="rounded-circle bg-dark" style="width: 32px;height: 32px;">
+                <svg class="svg-inline--fa fa-instagram fa-w-14 fa-lg fa-fw text-white position-relative" style="top: 18%;left: 15%;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                <!-- <i class="fab fa-instagram fa-lg fa-fw text-white position-relative" style="top: 18%;left: 15%"></i> Font Awesome fontawesome.com -->
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <h6 >
+                <h4 class="mb-2">Kebijakan Privasi</h4>
+              </h6>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 text-white px-0" style="padding-top: 6rem;">Syarat & Ketentuan</a>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 text-white px-0">Film</a> -->
+              </div>
+            </div>
+            <div class="col">
+              <h6>
+              <h4 class="mb-2">Hubungi Kami</h4>
+              </h6>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 text-white px-0" style="padding-top: 6rem;">085797983833</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
 <!-- Akhir Footer -->
 
     <!-- Optional JavaScript; choose one of the two! -->
+   
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

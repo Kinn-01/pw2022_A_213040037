@@ -16,6 +16,9 @@ if (isset($_POST["search"]) ) {
   $jerseay = search($_POST["keyword"]);
 }
 
+if(isset($_POST['pdf'])) {
+    header("location: cetak.php");
+}
 
 ?>
 
@@ -164,14 +167,6 @@ if (isset($_POST["search"]) ) {
                     </li>
 
                     
-
-                    <li class="nav-item">
-                      <a class="nav-link active" style="color: black;" aria-current="page" href="section/tambah_data.php">Tambah Data</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" style="color: black;" aria-current="page" href="section/masuk.php">Barang Masuk</a>
-                    </li>
-                    
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
@@ -206,6 +201,8 @@ if (isset($_POST["search"]) ) {
                         <h1 class="h3 mb-0 text-gray-800">Data Barang</h1>
                     </div>
 
+                    <!-- Link urutkan data -->
+                    <?php require 'section/urutkan.php'; ?>
             <div id="container">
       <table class="table">
   <thead>
@@ -244,6 +241,9 @@ if (isset($_POST["search"]) ) {
     <?php } ?>
   </tbody>
 </table>
+<a href="section/tambah_data.php" class="btn btn-info ms-1" target="_blank"><i class="bi bi-clipboard2-plus-fill"></i>&nbsp;Tambah Data Barang</a>
+<a href="section/masuk.php" class="btn btn-info ms-1" target="_blank"><i class="bi bi-clipboard2-plus-fill"></i>&nbsp;Tambah Stok Barang</a>
+<a href="cetak.php" class="btn btn-danger ms-1" target="_blank"><i class="bi bi-file-earmark-pdf-fill"></i>&nbsp;Export ke PDF</a>
   </div>
 
             </div>
@@ -259,6 +259,7 @@ if (isset($_POST["search"]) ) {
                 </div>
             </div>
         </footer>
+
         <!-- End of Footer -->
 
     </div>
