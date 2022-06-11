@@ -194,7 +194,7 @@ $barangmasuk = mysqli_query($conn, "SELECT * FROM masuk m, jerseay j WHERE j.id 
             <!-- /.container-fluid -->
             <div class="container-fluid">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                       <i class="bi bi-person-plus-fill"></i>&nbsp;Tambah Data Gadget
+                       <i class="bi bi-person-plus-fill"></i>&nbsp;Tambah Data Barang
                     </button>
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Barang</h1>
